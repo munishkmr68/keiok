@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-brandon font-normal text-t5 text-sm sm:text-base tracking-[0.72px];
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium text-t2 leading-10;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply lg:text-4xl sm:text-3xl text-2xl;
+  }
+  h3 {
+    @apply text-2xl sm:text-[1.75rem] font-bold;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
+  }
+
+  a {
+    @apply text-blue;
+  }
+}
+
+@layer components {
+  .primary-button {
+    @apply rounded-3xl w-full bg-blue px-4 sm:px-6 py-[9px] text-white hover:bg-t1 transition ease-in-out border-0;
+  }
+  .dark-button {
+    @apply rounded-3xl w-full bg-t1 hover:bg-blue px-4 sm:px-6 py-[9px] text-white transition ease-in-out border-0;
+  }
+  .carousel-slider {
+    @apply flex flex-col;
+  }
+  .carousel-arrows {
+    @apply order-last;
+  }
+  .disclosure-button {
+    @apply flex w-full justify-between border-b border-gray py-4 text-t2 text-base sm:text-lg font-medium items-center;
+  }
+  .disclosure-button-inner {
+    @apply flex w-full justify-between border-b border-gray py-4 text-t2 text-sm sm:text-base items-center;
+  }
+  .input1 {
+    @apply border border-input1 px-3.5 py-3 block w-full placeholder:text-input1 text-t2 sm:text-lg text-base rounded-[3px];
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../assets/fonts/BrandonGrotesque-Bold.woff2") format("woff2"),
+      url("../assets/fonts/BrandonGrotesque-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../assets/fonts/BrandonGrotesque-Light.woff2") format("woff2"),
+      url("../assets/fonts/BrandonGrotesque-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../assets/fonts/BrandonGrotesque-Black.woff2") format("woff2"),
+      url("../assets/fonts/BrandonGrotesque-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../assets/fonts/BrandonGrotesque-Thin.woff2") format("woff2"),
+      url("../assets/fonts/BrandonGrotesque-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../assets/fonts/BrandonGrotesque-Regular.woff2") format("woff2"),
+      url("../assets/fonts/BrandonGrotesque-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Brandon Grotesque";
+    src: url("../assets/fonts/BrandonGrotesque-Medium.woff2") format("woff2"),
+      url("../assets/fonts/BrandonGrotesque-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  .label {
+    @apply text-base sm:text-lg font-medium text-t2;
+  }
+
+  .product-carousel .carousel.carousel-slider {
+    @apply overflow-visible;
+  }
+  .product-carousel .carousel .control-dots {
+    @apply bottom-[-50px];
+  }
+  .product-carousel {
+    @apply pb-[10px];
+  }
+  .product-carousel .carousel .control-dots .dot {
+    @apply bg-gray shadow-none opacity-100;
+  }
+  .product-carousel .carousel .control-dots .dot.selected {
+    @apply bg-blue;
+  }
+}
