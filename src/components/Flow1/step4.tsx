@@ -29,13 +29,13 @@ const Step4 = () => {
       </div>
       <div className="max-w-[484px] mx-auto  px-4 py-8">
         <ul className="text-bg1 space-y-1 mb-3">
-          <li className="flex items-center gap-2">
-            <TruckIcon className="fill-current w-4 h-4" />
-            <span className="text-sm font-medium">Free shipping</span>
-          </li>
           <li className="flex items-center  gap-2">
             <CheckmarkIcon className="w-4 h-4" />
             <span className="text-sm font-medium">Cancel anytime</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <TruckIcon className="fill-current w-4 h-4" />
+            <span className="text-sm font-medium">Free shipping</span>
           </li>
         </ul>
 

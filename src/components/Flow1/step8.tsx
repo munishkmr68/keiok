@@ -64,7 +64,6 @@ const Step8 = () => {
             </div>
             <div>
               <h6 className="flex items-center gap-2 text-base sm:text-lg font-medium text-2 mb-2.5">
-                <SubscribeIcone className="w-6 h-6" />
                 Every 3 Months
               </h6>
               <ul className="flex flex-col gap-0 gap-1.5 pl-[30px] sm:text-right">

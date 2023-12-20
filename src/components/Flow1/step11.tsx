@@ -54,20 +54,8 @@ const Step11 = () => {
               </div>
               <p> September 16, 2023</p>
             </div>
-            <ArrowRightIcon />
           </div>
 
-          <div className="py-6 border-b border-gray flex items-center justify-between gap-2">
-            <div>
-              <div className="text-t2 mb-0.5 sm:text-lg text-base font-medium">
-                Manage Billing Info
-              </div>
-              <p className="text-t4 text-sm font-medium">
-                Payment Info, Order History, Delivery & Billing
-              </p>
-            </div>
-            <ArrowRightIcon />
-          </div>
           <div className="py-6 border-b border-gray flex items-center justify-between gap-2">
             <div>
               <div className="text-t2 mb-0.5 sm:text-lg text-base font-medium">

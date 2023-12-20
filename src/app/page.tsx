@@ -26,7 +26,7 @@ const Home = () => {
 
     if (currentStep === steps.length - 1) {
       // If on the last step, navigate to a different page
-      router.push("/activate"); // Replace "/other-page" with the actual path you want to navigate to
+      //router.push("/activate"); // Replace "/other-page" with the actual path you want to navigate to
       return;
     }
 

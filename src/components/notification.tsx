@@ -33,7 +33,7 @@ Notification.propTypes = {
 };
 
 Notification.defaultProps = {
-  backgroundColor: "#28a745",
+  backgroundColor: "#51C96D",
   textColor: "#ffffff",
 };
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import userImg from "../assets/images/user-img.png";
-import ClipartImg from "../assets/images/clipart-img.png";
+import ClipartImg from "../assets/images/unicorn-leftside.png";
 
 const ShoppingWith = () => {
   return (

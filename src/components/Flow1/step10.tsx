@@ -23,11 +23,11 @@ const Step10 = () => {
       <div className="bg-bg3 py-10 px-4">
         <div className="max-w-[484px] mx-auto">
           <Image
-            className="max-w-[66px] ml-auto mb-1"
+            className="max-w-[66px] ml-auto mb-1 mx-4"
             src={NortonLogo}
             alt="logo"
           />
-          <div className="flex flex-col gap-[9px]">
+          <div className="flex flex-col gap-[9px] px-4">
             <div className="relative">
               <Inputbox
                 name="email"
