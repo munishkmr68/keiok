@@ -23,7 +23,7 @@ const ForMySerum = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <ul className="text-t4">
+              <ul className="text-t4 test">
                 <li>step1:</li>
                 <li>step3:</li>
                 <li>step2:</li>
