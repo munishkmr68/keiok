@@ -16,7 +16,7 @@ const Step1 = () => {
       <div className="max-w-[484px] mx-auto px-4 py-12">
         <div className="flex gap-4 font-medium text-base sm:text-lg justify-between">
           <div className="flex flex-col items-center  gap-4 flex-1">
-            <Image className="" src={userImg} alt="user-img" />
+            <Image className="tst" src={userImg} alt="user-img" />
             Jancy Wade
           </div>
           <div className="flex flex-col items-center gap-4 flex-1">
