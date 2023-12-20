@@ -31,7 +31,7 @@ const Step9 = () => {
           A link to active your account has been sent to:
         </p>
         <p className="text-t4 text-base  font-bold  pb-[30px] border-b border-gray">
-          j<span className="mx-[3px]"> &#183;&#183;&#183;&#183;&#183;&#183;&#183; </span>2@gmail.com
+          j<span className="mx-[3px]">&#183;&#183;&#183;&#183;&#183;&#183;&#183;</span>2@gmail.com
         </p>
         <div className="divide-y divide-gray mt-24 pt-[30px] border-t border-gray">
           <div className="pb-[30px]">
@@ -41,7 +41,7 @@ const Step9 = () => {
                 Thank you, Erica! We are processing your order and have sent a
                 confirmation to your email:
               </p>
-              <p className="text-t4 text-base  font-bold">j<span className="mx-[3px]"> &#183;&#183;&#183;&#183;&#183;&#183;&#183; </span>2@gmail.com</p>
+              <p className="text-t4 text-base  font-bold">j<span className="mx-[3px]">&#183;&#183;&#183;&#183;&#183;&#183;&#183;</span>2@gmail.com</p>
               <p>
                 If you don&apos;t see the confirmation email within your inbox
                 within an hour, please check your spam folder.
