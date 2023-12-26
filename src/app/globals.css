@@ -22,7 +22,7 @@
     @apply lg:text-4xl sm:text-3xl text-2xl;
   }
   h3 {
-    @apply text-2xl sm:text-[1.75rem] font-bold;
+    @apply text-[2xl] sm:text-[1.75rem] font-bold;
   }
   h4 {
     @apply text-2xl;
@@ -43,9 +43,25 @@
   .primary-button {
     @apply rounded-3xl w-full bg-blue px-4 sm:px-6 py-[9px] text-white hover:bg-t1 transition ease-in-out border-0;
   }
+  .primary-button-outlined {
+    @apply rounded-3xl w-full bg-white px-4 sm:px-6 py-[8px] text-blue hover:bg-blue hover:text-white transition ease-in-out border border-blue ;
+  }
+  
   .dark-button {
     @apply rounded-3xl w-full bg-t1 hover:bg-blue px-4 sm:px-6 py-[9px] text-white transition ease-in-out border-0;
   }
+  .dark-button-outlined {
+    @apply rounded-3xl w-full bg-white hover:bg-t1 border border-t1 px-4 sm:px-6 py-[9px] text-t1 hover:text-white transition ease-in-out;
+  }
+
+  .tab-button {
+    @apply rounded-3xl w-full bg-white px-4 sm:px-6 py-[9px] text-blue transition ease-in-out border border-blue;
+  }
+
+  .tab-button-selected {
+    @apply rounded-3xl w-full bg-blue px-4 sm:px-6 py-[9px] text-white transition ease-in-out border border-blue;
+  }
+
   .carousel-slider {
     @apply flex flex-col;
   }
@@ -60,6 +76,12 @@
   }
   .input1 {
     @apply border border-input1 px-3.5 py-3 block w-full placeholder:text-input1 text-t2 sm:text-lg text-base rounded-[3px];
+  }
+  .input1.invalid {
+    @apply border-red;
+  }
+  .input1.valid {
+    @apply border-green;
   }
 }
 

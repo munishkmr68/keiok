@@ -1,6 +1,6 @@
 import Image from "next/image";
 import userImg from "../assets/images/user-img.png";
-import ClipartImg from "../assets/images/unicorn-leftside.png";
+import ClipartImg from "../assets/images/clipart-img.png";
 
 const ShoppingWith = () => {
   return (
@@ -23,7 +23,7 @@ const ShoppingWith = () => {
         <h6 className="label mb-4">100% money-back guarantee</h6>
         <div className="flex items-center gap-4">
           <Image
-            className="w-[120px] h-[120px] rounded-full"
+            className="w-[120px] h-[120px] rounded-full -scale-x-100 scale-y-100"
             src={ClipartImg}
             alt="user-img"
           />

@@ -9,8 +9,22 @@ import LockCircleIcon from "../../assets/images/icons/lock-circle.svg";
 import ProductImg from "../../assets/images/prd-img.png";
 import YourTotal from "@/components/yourtotal";
 import Footer from "@/common/Footer";
+import ButtonNextStep from "@/common/buttonNextStep";
+import Lock from "../../assets/images/icons/lock-white.svg";
 
-const Step8 = () => {
+interface Step8Props {
+  onContinueClick: () => void;
+}
+
+const Step8: React.FC<Step8Props> = ({ onContinueClick }) => {
+  const handleButtonClick = () => {
+    // Call the parent component's function to change the step
+    onContinueClick();
+        // Delay the scroll operation to allow time for rendering
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 0);
+  };
   return (
     <>
       <div className="max-w-[484px] mx-auto  px-4">
@@ -64,6 +78,7 @@ const Step8 = () => {
             </div>
             <div>
               <h6 className="flex items-center gap-2 text-base sm:text-lg font-medium text-2 mb-2.5">
+                <SubscribeIcone className="w-6 h-6" />
                 Every 3 Months
               </h6>
               <ul className="flex flex-col gap-0 gap-1.5 pl-[30px] sm:text-right">
@@ -83,6 +98,9 @@ const Step8 = () => {
         </div>
       </div>
       <Footer />
+      <div className="max-w-[484px] mx-auto px-4 py-8">
+      <ButtonNextStep icon={<Lock  />} handleClick={handleButtonClick} amt="" label="Continue" />
+      </div>
     </>
   );
 };

@@ -1,19 +1,25 @@
 "use client";
 import Image from "next/image";
-import Freeshipping from "@/components/freeshipping";
-import ShoppingWith from "@/components/shoppingwith";
 import Language from "@/components/language";
 import Arrow from "../../assets/images/icons/check-circle-white.svg";
 import ArrowRightIcon from "../../assets/images/icons/arrow-right.svg";
 import Amex from "../../assets/images/icons/amex.svg";
 import Notification from "@/components/notification";
-import Inputbox from "@/components/inputbox";
-import SubscribeIcone from "../../assets/images/icons/subscribe.svg";
-import NortonLogo from "../../assets/images/norton-logo.png";
 import PrdImg from "../../assets/images/prd-img.png";
 import Footer from "@/common/Footer";
+import { useRouter } from "next/navigation";
+
+
 
 const Step11 = () => {
+
+
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+   
+    router.push('/activate');
+  };
   return (
     <>
       <div className="max-w-[484px] mx-auto px-4">
@@ -54,8 +60,20 @@ const Step11 = () => {
               </div>
               <p> September 16, 2023</p>
             </div>
+            <ArrowRightIcon />
           </div>
 
+          <div className="py-6 border-b border-gray flex items-center justify-between gap-2">
+            <div>
+              <div className="text-t2 mb-0.5 sm:text-lg text-base font-medium">
+                Manage Billing Info
+              </div>
+              <p className="text-t4 text-sm font-medium">
+                Payment Info, Order History, Delivery & Billing
+              </p>
+            </div>
+            <ArrowRightIcon />
+          </div>
           <div className="py-6 border-b border-gray flex items-center justify-between gap-2">
             <div>
               <div className="text-t2 mb-0.5 sm:text-lg text-base font-medium">
@@ -80,9 +98,10 @@ const Step11 = () => {
           </div>
         </div>
 
-        <button className="primary-button mt-[30px]">
+        <button className="primary-button mt-[30px]" onClick={handleButtonClick}>
           Cancel MY Subscription
         </button>
+
       </div>
 
       <div className="max-w-[484px] mx-auto px-4 py-8">
@@ -91,6 +110,7 @@ const Step11 = () => {
         </div>
       </div>
       <Footer />
+      
     </>
   );
 };

@@ -10,8 +10,22 @@ import ProductImg from "../../assets/images/prd-img.png";
 import YourTotal from "@/components/yourtotal";
 import Arrow from "../../assets/images/icons/check-circle-white.svg";
 import Footer from "@/common/Footer";
+import ButtonNextStep from "@/common/buttonNextStep";
+import Lock from "../../assets/images/icons/lock-white.svg";
 
-const Step9 = () => {
+interface Step9Props {
+  onContinueClick: () => void;
+}
+
+const Step9: React.FC<Step9Props> = ({ onContinueClick }) => {
+  const handleButtonClick = () => {
+    // Call the parent component's function to change the step
+    onContinueClick();
+        // Delay the scroll operation to allow time for rendering
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 0);
+  };
   return (
     <>
       <div className="max-w-[484px] mx-auto  px-4">
@@ -31,9 +45,9 @@ const Step9 = () => {
           A link to active your account has been sent to:
         </p>
         <p className="text-t4 text-base  font-bold  pb-[30px] border-b border-gray">
-          j<span className="mx-[3px]">&#183;&#183;&#183;&#183;&#183;&#183;&#183;</span>2@gmail.com
+          j 2@gmail.com
         </p>
-        <div className="divide-y divide-gray mt-24 pt-[30px] border-t border-gray">
+        <div className="divide-y divide-gray mt-24">
           <div className="pb-[30px]">
             <h3 className="mb-4">Order Confirmation</h3>
             <div className="flex flex-col gap-3.5 text-t4 text-base">
@@ -41,7 +55,7 @@ const Step9 = () => {
                 Thank you, Erica! We are processing your order and have sent a
                 confirmation to your email:
               </p>
-              <p className="text-t4 text-base  font-bold">j<span className="mx-[3px]">&#183;&#183;&#183;&#183;&#183;&#183;&#183;</span>2@gmail.com</p>
+              <p className="text-t4 text-base  font-bold">j 2@gmail.com</p>
               <p>
                 If you don&apos;t see the confirmation email within your inbox
                 within an hour, please check your spam folder.
@@ -133,6 +147,7 @@ const Step9 = () => {
             </div>
             <div>
               <h6 className="flex items-center gap-2 text-base sm:text-lg font-medium text-2 mb-2.5">
+                <SubscribeIcone className="w-6 h-6" />
                 Every 3 Months
               </h6>
               <ul className="flex flex-col gap-0 gap-1.5 pl-[30px] sm:text-right">
@@ -152,6 +167,10 @@ const Step9 = () => {
         </div>
       </div>
       <Footer />
+      <div className="max-w-[484px] mx-auto px-4 py-8">
+      <ButtonNextStep icon={<Lock  />} handleClick={handleButtonClick} amt="" label="Activate MY Account" />
+      <button className="primary-button-outlined mt-2">Activate Later</button>
+      </div>
     </>
   );
 };

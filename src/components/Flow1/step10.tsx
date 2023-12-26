@@ -6,8 +6,22 @@ import LockCircleIcon from "../../assets/images/icons/lock-circle.svg";
 import Inputbox from "@/components/inputbox";
 import NortonLogo from "../../assets/images/norton-logo.png";
 import Footer from "@/common/Footer";
+import ButtonNextStep from "@/common/buttonNextStep";
+import Lock from "../../assets/images/icons/lock-white.svg";
 
-const Step10 = () => {
+interface Step10Props {
+  onContinueClick: () => void;
+}
+
+const Step10: React.FC<Step10Props> = ({ onContinueClick }) => {
+  const handleButtonClick = () => {
+    // Call the parent component's function to change the step
+    onContinueClick();
+        // Delay the scroll operation to allow time for rendering
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 0);
+  };
   return (
     <>
       <div className="max-w-[484px] mx-auto  px-4">
@@ -23,11 +37,11 @@ const Step10 = () => {
       <div className="bg-bg3 py-10 px-4">
         <div className="max-w-[484px] mx-auto">
           <Image
-            className="max-w-[66px] ml-auto mb-1 mx-4"
+            className="max-w-[66px] ml-auto mb-1"
             src={NortonLogo}
             alt="logo"
           />
-          <div className="flex flex-col gap-[9px] px-4">
+          <div className="flex flex-col gap-[9px]">
             <div className="relative">
               <Inputbox
                 name="email"
@@ -64,6 +78,10 @@ const Step10 = () => {
         </div>
       </div>
       <Footer />
+      <div className="max-w-[484px] mx-auto px-4 py-8">
+      <ButtonNextStep icon={<Lock  />} handleClick={handleButtonClick} amt="" label="Activate MY Account" />
+      <button className="primary-button-outlined mt-2">Activate Later</button>
+      </div>
     </>
   );
 };

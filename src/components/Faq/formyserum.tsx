@@ -23,10 +23,10 @@ const ForMySerum = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <ul className="text-t4 tracking-normal">
-                <li>Step 1:</li>
-                <li>Step 2:</li>
-                <li>Step 3:</li>
+              <ul className="text-t4">
+                <li>step1:</li>
+                <li>step3:</li>
+                <li>step2:</li>
               </ul>
             </Disclosure.Panel>
           </>
@@ -42,7 +42,7 @@ const ForMySerum = () => {
                 className={`${open ? "" : "rotate-180 transform"} h-5 w-5 `}
               />
             </Disclosure.Button>
-            <Disclosure.Panel className="py-4 border-b border-gray tracking-normal">
+            <Disclosure.Panel className="py-4 border-b border-gray">
               <div className="mb-4 text-t2">Title</div>
               <p className="text-t4">
                 Nam vel diam dignissim, aliquam justo quis, vehicula nulla.
@@ -63,7 +63,7 @@ const ForMySerum = () => {
                 className={`${open ? "" : "rotate-180 transform"} h-5 w-5 `}
               />
             </Disclosure.Button>
-            <Disclosure.Panel className="py-4 border-b border-gray tracking-normal">
+            <Disclosure.Panel className="py-4 border-b border-gray">
               <div className="mb-4 text-t2">Title</div>
               <p className="text-t4">
                 Nam vel diam dignissim, aliquam justo quis, vehicula nulla.

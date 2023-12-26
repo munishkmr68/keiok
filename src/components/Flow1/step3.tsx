@@ -6,8 +6,22 @@ import Freeshipping from "@/components/freeshipping";
 import ShoppingWith from "@/components/shoppingwith";
 import Language from "@/components/language";
 import Footer from "@/common/Footer";
+import ButtonNextStep from "@/common/buttonNextStep";
 
-const Step3 = () => {
+
+interface Step3Props {
+  onContinueClick: () => void;
+}
+
+const Step3: React.FC<Step3Props> = ({ onContinueClick }) => {
+  const handleButtonClick = () => {
+    // Call the parent component's function to change the step
+    onContinueClick();
+        // Delay the scroll operation to allow time for rendering
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 0);
+  };
   return (
     <>
       <div className="max-w-[484px] mx-auto  px-4 py-12">
@@ -41,6 +55,9 @@ const Step3 = () => {
         </div>
       </div>
       <Footer />
+      <div className="max-w-[484px] mx-auto px-4 py-8">
+      <ButtonNextStep handleClick={handleButtonClick} amt="" label="Continue" />
+      </div>
     </>
   );
 };

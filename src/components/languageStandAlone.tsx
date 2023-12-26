@@ -29,10 +29,10 @@ export default function Language() {
 
           <Listbox.Button className="relative w-full cursor-default border-y text-base border-gray py-6 font-normal outline-none">
             <span className="block truncate">{selected.name}</span>
-            <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2">
+            <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
               <Image src={selected.flag} alt="flag" className="w-5 h-5 mr-2" />
             </span>
-            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
               <ChevronUpDownIcon
                 className="h-5 w-5 text-border-gray-400"
                 aria-hidden="true"

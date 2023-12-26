@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/solid";
 import LockIcon from "../assets/images/icons/lock.svg";
 import NortonLogo from "../assets/images/norton-logo.png";
 import BbbLogo from "../assets/images/bbb-logo.png";
@@ -29,13 +29,13 @@ export default function Language() {
         <div className="relative flex items-center">
           {/* Display the language flag */}
 
-          <Listbox.Button className="relative w-full cursor-default border-y text-base border-gray py-6 font-normal outline-none">
+          <Listbox.Button className="relative w-full cursor-default border-y text-base border-[#D8D8D8] py-6 font-normal outline-none">
             <span className="block truncate">{selected.name}</span>
-            <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2">
+            <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
               <Image src={selected.flag} alt="flag" className="w-5 h-5 mr-2" />
             </span>
-            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-              <ChevronDownIcon
+            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+              <ChevronUpDownIcon
                 className="h-5 w-5 text-border-gray-400"
                 aria-hidden="true"
               />
