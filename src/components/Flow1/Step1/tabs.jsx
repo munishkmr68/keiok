@@ -3,16 +3,15 @@ import { Tab } from "@headlessui/react";
 import Ambassador from "./ambassador";
 import Affiliate from "./affiliate";
 
-function classNames(...classes: string[]) {
+function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Tabs = () => {
   return (
     <Tab.Group>
-        <div className="max-w-[484px] mx-auto px-4">
+      <div className="max-w-[484px] mx-auto px-4">
         <Tab.List className="flex">
-            
           <Tab
             className={({ selected }) =>
               classNames(
@@ -22,7 +21,6 @@ const Tabs = () => {
               )
             }
           >
-            
             Brand Ambassador
           </Tab>
           <Tab
@@ -37,7 +35,7 @@ const Tabs = () => {
             Brand Affiliate
           </Tab>
         </Tab.List>
-        </div>
+      </div>
       <Tab.Panels>
         <Tab.Panel
           className={classNames(

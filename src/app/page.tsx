@@ -14,6 +14,8 @@ import Step8 from "../components/Flow1/step8";
 import Step9 from "../components/Flow1/step9";
 import Step10 from "../components/Flow1/step10";
 import Step11 from "../components/Flow1/step11";
+import Popup from "../components/Flow1/popup";
+import Popup1 from "../components/Flow1/popup1";
 
 const Home: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -49,6 +51,9 @@ const Home: React.FC = () => {
     <Step9 key={10} onContinueClick={handleButtonClick} />,
     <Step10 key={11} onContinueClick={handleButtonClick} />,
     <Step11 key={12}  />,
+    // <Popup key={13} />,
+    // <Popup1 key={14} />
+
   ];
 
   return (

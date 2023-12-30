@@ -33,7 +33,6 @@ const Step2 = () => {
         </div>
       </div>
       <Footer />
-
     </>
   );
 };

@@ -28,7 +28,6 @@ export default function Language() {
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative flex items-center">
           {/* Display the language flag */}
-
           <Listbox.Button className="relative w-full cursor-default border-y text-base border-[#D8D8D8] py-6 font-normal outline-none">
             <span className="block truncate">{selected.name}</span>
             <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
@@ -42,7 +41,7 @@ export default function Language() {
             </span>
           </Listbox.Button>
           <Transition
-            as={React.Fragment} // Specify React.Fragment here
+            as={React.Fragment}
             leave="transition ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"

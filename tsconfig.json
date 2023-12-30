@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/CreatNewLead",
-    "src/app/layout.js"
+    "src/app/layout.js",
+    "src/app/signin/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

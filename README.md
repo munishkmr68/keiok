@@ -1,29 +1,36 @@
-# Keiok
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Keiok is an ecommerce website that sells products and goods. It is built with Next.js, TypeScript, and Tailwind CSS. The design is based on this [Figma](https://www.figma.com/file/7RnaqHMh25qMCEgyB52b75/Brand-Guide---1?type=design&node-id=5368-18947&mode=design&t=WONPuYhBNBKK4fzD-0) file.
+## Getting Started
 
-## Installation
+First, run the development server:
 
-To install the project, follow these steps:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- Clone the repository.
-- Install the dependencies: `yarn install` or `npm install`
-- Run the development server: `yarn dev` or `npm run dev`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Usage
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-To use the project, open http://localhost:3000 with your browser. You will see the home page with some products. You can also sign in with your email and password at http://localhost:3000/signin.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Deployment
+## Learn More
 
-To deploy the project on Vercel, follow these steps:
+To learn more about Next.js, take a look at the following resources:
 
-- Create a Vercel account and connect it to your GitHub account
-- Import your project from GitHub and select the main branch
-- Configure the project settings and environment variables
-- Click on Deploy and wait for the deployment to finish
-- You will get a URL for your live site, such as `https://keiok.vercel.app`
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Build
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-To generate a production build of the project, run `yarn build` or `npm run build`. This will create a `.next` folder with the optimized files. You can then serve the files with `yarn start` or `npm start`.
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

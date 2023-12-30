@@ -1,18 +1,18 @@
 "use client";
 import Image from "next/image";
 import Language from "@/components/language";
+import Footer from "@/common/Footer";
 import Inputbox from "@/components/inputbox";
 import NortonLogo from "../../assets/images/norton-logo.png";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Footer from "@/common/Footer";
 
-const Step4 = () => {
+const Step3 = () => {
   return (
     <>
       <div className="max-w-[484px] mx-auto px-4 py-12 pb-[30px]">
-        <h3 className="font-bold">Activate Your Account</h3>
+        <h3 className="font-bold">Reset Email / Password</h3>
         <p className="text-t4 mb-0 text-base ">
-        Enter your emaill address below and we will send you an email with instructions on how to activate your account.
+          Enter your email address below and we will send you an email with
+          instructions on how to reset your password.
         </p>
       </div>
       <div className="bg-bg3 py-8 pt-3 sm:px-4">
@@ -33,7 +33,9 @@ const Step4 = () => {
         </div>
       </div>
       <div className="max-w-[484px] mx-auto px-4">
-        <button className="dark-button-outlined mt-8">I don&apos;t remember my email</button>
+        <button className="dark-button-outlined mt-8">
+          I don&apos;t remember my email
+        </button>
       </div>
       <div className="max-w-[484px] mx-auto px-4 mb-12">
         <div className="mt-24 border-b border-gray">
@@ -45,4 +47,4 @@ const Step4 = () => {
   );
 };
 
-export default Step4;
+export default Step3;

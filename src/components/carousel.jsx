@@ -4,14 +4,9 @@ import { Carousel } from "react-responsive-carousel";
 import PrdImg from "../assets/images/prd-img.png";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/solid";
 
-interface CustomArrowProps {
-  onClick: () => void;
-  direction: "prev" | "next";
-}
-
-const CustomArrow: React.FC<CustomArrowProps> = ({ onClick, direction }) => {
+const CustomArrow = ({ onClick, direction }) => {
   // Customize your arrow here (you can use an image or any other component)
-  const arrowStyle: React.CSSProperties = {
+  const arrowStyle = {
     backgroundColor: "#1990C6",
     width: "70px",
     height: "40px",
@@ -39,21 +34,19 @@ const CustomArrow: React.FC<CustomArrowProps> = ({ onClick, direction }) => {
   );
 };
 
-const CarouselComponent: React.FC = () => {
+const CarouselComponent = () => {
   return (
     <Carousel
       className="product-carousel clear-both"
       autoPlay
       showStatus={false}
       emulateTouch
-      renderArrowPrev={(
-        onClickHandler: () => void,
-        hasPrev: boolean | undefined
-      ) => hasPrev && <CustomArrow onClick={onClickHandler} direction="prev" />}
-      renderArrowNext={(
-        onClickHandler: () => void,
-        hasNext: boolean | undefined
-      ) => hasNext && <CustomArrow onClick={onClickHandler} direction="next" />}
+      renderArrowPrev={(onClickHandler, hasPrev) =>
+        hasPrev && <CustomArrow onClick={onClickHandler} direction="prev" />
+      }
+      renderArrowNext={(onClickHandler, hasNext) =>
+        hasNext && <CustomArrow onClick={onClickHandler} direction="next" />
+      }
     >
       <div className="shadow-[0_0_1px_#333] m-1">
         <Image src={PrdImg} alt="img" />

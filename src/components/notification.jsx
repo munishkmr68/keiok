@@ -1,19 +1,7 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-interface NotificationProps {
-  icon: ReactElement;
-  message: string;
-  backgroundColor?: string;
-  textColor?: string;
-}
-
-const Notification: React.FC<NotificationProps> = ({
-  icon,
-  message,
-  backgroundColor,
-  textColor,
-}) => {
+const Notification = ({ icon, message, backgroundColor, textColor }) => {
   return (
     <div
       className={`flex items-center gap-2.5 rounded py-[18px] px-4 text-white`}

@@ -2,11 +2,11 @@
 import Tabs from "@/components/tabs";
 import Footer from "@/common/Footer";
 import { Disclosure } from "@headlessui/react";
-import CloseIcon from "@/assets/images/icons/close.svg"
+import CloseIcon from "@/assets/images/icons/close.svg";
 import PlusIcon from "@/assets/images/icons/plus.svg";
 import ForMySerum from "@/components/Faq/formyserum";
 import Language from "@/components/language";
-import CheckmarkIcon from "../../assets/images/icons/checkmark.svg"
+import CheckmarkIcon from "../../assets/images/icons/checkmark.svg";
 
 function Step9() {
   const tabsData = [
@@ -15,8 +15,7 @@ function Step9() {
       content: (
         <div>
           <div className="max-w-[484px] mx-auto  px-4">
-            <h3 className="mt-5 mb-3">You are invited to join as a
-              Brand Ambassador!</h3>
+            <h3 className="mt-5 mb-3">You are invited to join as a Brand Ambassador!</h3>
           </div>
           <div className="bg-pink">
             <div className="max-w-[484px] mx-auto  px-4 py-2">
@@ -47,8 +46,7 @@ function Step9() {
               </li>
             </ul>
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
       ),
     },
@@ -57,8 +55,7 @@ function Step9() {
       content: (
         <div>
           <div className="max-w-[484px] mx-auto  px-4">
-            <h3 className="mt-5 mb-3">You are invited to join as a
-              Brand Affiliate!</h3>
+            <h3 className="mt-5 mb-3">You are invited to join as a Brand Affiliate!</h3>
           </div>
           <div className="bg-pink">
             <div className="max-w-[484px] mx-auto  px-4 py-2">
@@ -89,8 +86,7 @@ function Step9() {
               </li>
             </ul>
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
       ),
     },
@@ -143,6 +139,6 @@ function Step9() {
       <Footer />
     </>
   );
-};
+}
 
 export default Step9;

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Step1 from "../../components/Flow2/step1";
@@ -12,22 +11,23 @@ import Step7 from "../../components/Flow2/step7";
 import Step8 from "../../components/Flow2/step8";
 import ButtonNextStep from "@/common/buttonNextStep";
 
+// Signin component
 const Signin = () => {
+  // React hooks
   const router = useRouter();
-  const [currentStep, setCurrentStep] = useState<number>(0);
+  const [currentStep, setCurrentStep] = useState(0);
 
+  // Event handler for button click
   const handleButtonClick = () => {
     console.log("Button clicked!");
 
     if (currentStep === steps.length - 1) {
-      // If on the last step, navigate to a different page
-      router.push("/activate"); // Replace "/other-page" with the actual path you want to navigate to
+      router.push("/activate");
       return;
     }
 
     setCurrentStep((prevStep) => prevStep + 1);
 
-    // Delay the scroll operation to allow time for rendering
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, 0);
@@ -47,11 +47,16 @@ const Signin = () => {
   return (
     <>
       {steps[currentStep]}
-    <div className="max-w-[484px] mx-auto px-4 py-8">
-      <ButtonNextStep handleClick={handleButtonClick} amt="" label="Continue" />
-    </div>
+      <div className="max-w-[484px] mx-auto px-4 py-8">
+        <ButtonNextStep
+          handleClick={handleButtonClick}
+          amt=""
+          label="Continue"
+        />
+      </div>
     </>
   );
 };
 
+// Export the component
 export default Signin;
