@@ -1,10 +1,10 @@
 const Inputbox = ({
   name,
   id,
-  autoComplete = "off",
+  autoComplete,
   placeholder,
-  className = "",
-  disabled = false,
+  className,
+  disabled,
 }) => {
   return (
     <input

@@ -44,9 +44,9 @@
     @apply rounded-3xl w-full bg-blue px-4 sm:px-6 py-[9px] text-white hover:bg-t1 transition ease-in-out border-0;
   }
   .primary-button-outlined {
-    @apply rounded-3xl w-full bg-white px-4 sm:px-6 py-[8px] text-blue hover:bg-blue hover:text-white transition ease-in-out border border-blue ;
+    @apply rounded-3xl w-full bg-white px-4 sm:px-6 py-[8px] text-blue hover:bg-blue hover:text-white transition ease-in-out border border-blue;
   }
-  
+
   .dark-button {
     @apply rounded-3xl w-full bg-t1 hover:bg-blue px-4 sm:px-6 py-[9px] text-white transition ease-in-out border-0;
   }
@@ -82,6 +82,9 @@
   }
   .input1.valid {
     @apply border-green;
+  }
+  .selectbox {
+    @apply border border-input1 pl-3.5 pr-7 py-3 block w-full text-input1  sm:text-lg text-base rounded-[3px] bg-white bg-[] appearance-none;
   }
 }
 

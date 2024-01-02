@@ -48,7 +48,9 @@ const Step1 = () => {
                 placeholder="Email"
                 className="invalid"
               />
-              <p className="text-sm text-red">Please provide a valid email address.</p>
+              <p className="text-sm text-red">
+                Please provide a valid email address.
+              </p>
             </div>
             <div>
               <Inputbox
@@ -57,14 +59,16 @@ const Step1 = () => {
                 autoComplete="password"
                 placeholder="Password"
               />
-              {/* <p className="text-sm text-red">The password must contain between 4 and 60 characters.</p> */}
             </div>
           </div>
         </div>
       </div>
 
       <div className="max-w-[484px] mx-auto px-4">
-        <button className="dark-button-outlined mt-8" onClick={handleButtonClick}>
+        <button
+          className="dark-button-outlined mt-8"
+          onClick={handleButtonClick}
+        >
           Need Help?
         </button>
       </div>
