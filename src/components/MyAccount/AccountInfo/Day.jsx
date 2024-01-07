@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/24/solid";
-import SelectArrow from "../../../../assets/images/icons/select-arrow.svg";
+import SelectArrow from "../../../assets/images/icons/select-arrow.svg";
 
 import React from "react";
 
@@ -22,7 +22,7 @@ export default function Day() {
   return (
     <>
       <Listbox value={selected} onChange={setSelected}>
-        <div className="relative flex items-center z-20">
+        <div className="relative z-20 w-full">
           <Listbox.Button className="relative w-full cursor-default selectbox outline-none text-left">
             <span className="truncate">{selected}</span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3.5">

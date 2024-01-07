@@ -1,12 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import userImg from "../../../../assets/images/user-img.png";
-import Language from '@/components/language';
-import Footer from '@/common/Footer';
-import ButtonNextStep from '@/common/buttonNextStep';
+import Language from "@/components/language";
+import Footer from "@/common/Footer";
+import ButtonNextStep from "@/common/buttonNextStep";
 import ArrowbottomIcon from "../../../../assets/images/icons/arrowbottomicon.svg";
 import Inputbox from "@/components/inputbox";
-import { ChevronLeftIcon } from '@heroicons/react/24/solid';
+import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import Faq from "./faq";
 
 const Website = ({ onContinueClick, onBackClick }) => {
@@ -14,7 +14,7 @@ const Website = ({ onContinueClick, onBackClick }) => {
     // Smooth scroll to the top with a slight delay
     setTimeout(() => {
       const element = document.scrollingElement || document.documentElement;
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
@@ -38,71 +38,69 @@ const Website = ({ onContinueClick, onBackClick }) => {
       <div className="py-8 pt-3 max-w-[484px] mx-auto px-4">
         <div className="border-gray border-t pt-8">
           <div className="flex flex-col gap-[9px]">
-            <label className='text-lg text-[#1C1C1C]'>keiok.com</label>
+            <label className="text-lg text-[#1C1C1C]">keiok.com</label>
             <Inputbox
               name="websitename"
               id="websitename"
-              autoComplete="websitename"
+              autocomplete="websitename"
               placeholder="Your website name"
             />
           </div>
-          <div class="max-w-[484px] mx-auto"><button class="dark-button mt-8">Check availability</button></div>
-        </div>
-      </div>
-      <div className="max-w-[484px] mx-auto px-4">
-      <Faq/>
-      <div className="mx-auto mt-24">
-                    <div className="border-[#D8D8D8] border-t border-b py-4 flex items-center gap-2.5 justify-between">
-                      <div className="w-full">
-                        <h6 className="text-base">
-                        MY Path:
-                          <a
-                            href="#"
-                            className="font-normal text-xs float-right mt-1 flex items-center"
-                          >
-                            Change <ArrowbottomIcon className="ml-2" />
-                          </a>
-                        </h6>
-                        <p className="text-sm leading-6">
-                        Brand Affiliate
-                        </p>
-                      </div>
-                    </div>
-                    <div className="border-[#D8D8D8] border-b py-4 flex items-center gap-2.5 justify-between">
-                      <div className="w-full">
-                        <h6 className="text-base">
-                        Birthdate:
-                          <a
-                            href="#"
-                            className="font-normal text-xs float-right mt-1 flex items-center"
-                          >
-                            Change <ArrowbottomIcon className="ml-2" />
-                          </a>
-                        </h6>
-                        <p className="text-sm leading-6">
-                        July 17th, 1987
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-      </div>
-      <div className="max-w-[484px] mx-auto mt-0 px-4">
-      <div className="border-b border-gray py-6">
-        <h6 className="label mb-4">Your sponsor is</h6>
-        <div className="flex items-center gap-4">
-          <Image
-            className="w-[120px] h-[120px] rounded-full"
-            src={userImg}
-            alt="user-img"
-          />
-          <div>
-            <h6 className="label mb-0.5">Jancy Wade</h6>
-            <p className="">Brand Ambassador</p>
+          <div className="max-w-[484px] mx-auto">
+            <button className="dark-button mt-8">Check availability</button>
           </div>
         </div>
       </div>
+      <div className="max-w-[484px] mx-auto px-4">
+        <Faq />
+        <div className="mx-auto mt-24">
+          <div className="border-[#D8D8D8] border-t border-b py-4 flex items-center gap-2.5 justify-between">
+            <div className="w-full">
+              <h6 className="text-base">
+                MY Path:
+                <a
+                  href="#"
+                  className="font-normal text-xs float-right mt-1 flex items-center"
+                >
+                  Change <ArrowbottomIcon className="ml-2" />
+                </a>
+              </h6>
+              <p className="text-sm leading-6">Brand Affiliate</p>
+            </div>
+          </div>
+          <div className="border-[#D8D8D8] border-b py-4 flex items-center gap-2.5 justify-between">
+            <div className="w-full">
+              <h6 className="text-base">
+                Birthdate:
+                <a
+                  href="#"
+                  className="font-normal text-xs float-right mt-1 flex items-center"
+                >
+                  Change <ArrowbottomIcon className="ml-2" />
+                </a>
+              </h6>
+              <p className="text-sm leading-6">July 17th, 1987</p>
+            </div>
+          </div>
+        </div>
       </div>
-      
+      <div className="max-w-[484px] mx-auto mt-0 px-4">
+        <div className="border-b border-gray py-6">
+          <h6 className="label mb-4">Your sponsor is</h6>
+          <div className="flex items-center gap-4">
+            <Image
+              className="w-[120px] h-[120px] rounded-full"
+              src={userImg}
+              alt="user-img"
+            />
+            <div>
+              <h6 className="label mb-0.5">Jancy Wade</h6>
+              <p className="">Brand Ambassador</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-[484px] mx-auto pb-10 px-4">
         <div className="mt-24">
           <Language />
@@ -116,7 +114,11 @@ const Website = ({ onContinueClick, onBackClick }) => {
         >
           <ChevronLeftIcon className="w-4 h-4 stroke-current" />
         </span>
-        <ButtonNextStep handleClick={handleButtonClick} amt="" label="Continue" />
+        <ButtonNextStep
+          handleClick={handleButtonClick}
+          amt=""
+          label="Continue"
+        />
       </div>
     </>
   );

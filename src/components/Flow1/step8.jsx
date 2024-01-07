@@ -37,7 +37,7 @@ const Step8 = ({ onContinueClick }) => {
           Cancel easily online
         </p>
         <CrditDebitPay />
-        <hr className="border-gray mt-[30px]" />
+        <hr className="border-gray mt-[30px] pb-[30px]" />
 
         <YourTotal />
 
@@ -78,7 +78,7 @@ const Step8 = ({ onContinueClick }) => {
                 <SubscribeIcone className="w-6 h-6" />
                 Every 3 Months
               </h6>
-              <ul className="flex flex-col gap-0 gap-1.5 pl-[30px] sm:text-right">
+              <ul className="flex flex-col gap-0 sm:gap-1.5 pl-[30px] sm:text-right">
                 <li className="text-[10px] sm:text-xs text-t4">Today</li>
                 <li className="text-[10px] sm:text-xs text-t4">
                   Jan 16th, 2024

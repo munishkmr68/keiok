@@ -1,7 +1,7 @@
 const Inputbox = ({
   name,
   id,
-  autoComplete,
+  autocomplete,
   placeholder,
   className,
   disabled,
@@ -11,7 +11,7 @@ const Inputbox = ({
       type="text"
       name={name}
       id={id}
-      autoComplete={autoComplete}
+      autocomplete={autocomplete}
       className={`input1 ${className || ""}`}
       placeholder={placeholder}
       disabled={disabled}

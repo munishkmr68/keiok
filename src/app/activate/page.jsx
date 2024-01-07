@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import ShoppingWith from "@/components/shoppingwith";
 import Language from "@/components/language";
@@ -5,6 +6,11 @@ import LockCircleIcon from "../../assets/images/icons/lock-circle.svg";
 import Inputbox from "@/components/inputbox";
 import NortonLogo from "../../assets/images/norton-logo.png";
 import Footer from "@/common/Footer";
+import ButtonNextStep from "@/common/buttonNextStep";
+import AvtivateLaterModal from "@/components/Activate/AvtivateLaterModal";
+import ActivateAccountModal from "@/components/Activate/ActivateAccountModal";
+import Lock from "../../assets/images/icons/lock-white.svg";
+
 
 const ActivateAccount = () => {
   return (
@@ -33,7 +39,7 @@ const ActivateAccount = () => {
                 className="max-h-[54px] pt-7 disabled:!border-inputcolor disabled:placeholder:text-inputcolor disabled:text-inputcolor peer"
                 id="email"
                 disabled={true}
-                autoComplete="email"
+                autocomplete="email"
                 placeholder="jaywade12@gmail.com"
               />
               <label className="font-bold absolute top-[2px] left-3.5 peer-disabled:text-inputcolor">
@@ -43,13 +49,13 @@ const ActivateAccount = () => {
             <Inputbox
               name="password"
               id="password"
-              autoComplete="password"
+              autocomplete="password"
               placeholder="Password (6-60 characters)"
             />
             <Inputbox
               name="password"
               id="password"
-              autoComplete="password"
+              autocomplete="password"
               placeholder="Re-enter password"
             />
           </div>
@@ -63,6 +69,11 @@ const ActivateAccount = () => {
         </div>
       </div>
       <Footer />
+      <div className="max-w-[484px] mx-auto px-4 py-8">
+
+        <ActivateAccountModal />
+        <AvtivateLaterModal />
+      </div>
     </>
   );
 };

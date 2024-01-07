@@ -2,6 +2,7 @@ import Image from "next/image";
 import userImg from "../../assets/images/user-img.png";
 import ClipartImg from "../../assets/images/clipart-img.png";
 import Menu from "@/components/menu";
+import SubscriptionBar from "@/components/Flow1/SubscriptionBar";
 
 const Header = () => {
   return (
@@ -18,6 +19,7 @@ const Header = () => {
         </div>
         <Menu />
       </div>
+      {/* <SubscriptionBar /> */}
     </header>
   );
 };

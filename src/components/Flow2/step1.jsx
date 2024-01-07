@@ -36,7 +36,7 @@ const Step1 = () => {
             <Inputbox
               name="email"
               id="email"
-              autoComplete="email"
+              autocomplete="email"
               placeholder="Email"
               className="valid"
             />
@@ -44,7 +44,7 @@ const Step1 = () => {
               <Inputbox
                 name="email"
                 id="email"
-                autoComplete="email"
+                autocomplete="email"
                 placeholder="Email"
                 className="invalid"
               />
@@ -56,7 +56,7 @@ const Step1 = () => {
               <Inputbox
                 name="password"
                 id="password"
-                autoComplete="password"
+                autocomplete="password"
                 placeholder="Password"
               />
             </div>

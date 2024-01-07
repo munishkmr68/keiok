@@ -3,6 +3,7 @@ import "./globals.css";
 import { useState, useEffect } from "react";
 import Loader from "../common/Loader";
 import Header from "@/common/Header";
+import Script from 'next/script';
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -14,6 +15,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
+
+      <Script
+        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places`}
+        strategy="beforeInteractive"
+      />
+
         {loading ? (
           <Loader />
         ) : (
@@ -32,6 +39,7 @@ export default function RootLayout({ children }) {
           </>
         )}
       </body>
+      
     </html>
   );
 }

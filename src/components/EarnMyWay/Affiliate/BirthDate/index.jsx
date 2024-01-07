@@ -33,16 +33,7 @@ const BirthDate = ({ onContinueClick, onBackClick }) => {
     onBackClick();
     scrollToTop();
   };
-  const selectbox = {
-    // width: "100%",
-    // background: "#fff",
-    // height: "54px",
-    // borderRadius: "3px",
-    // border: "1px solid rgb(107 107 107)",
-    // fontSize: "1.125rem",
-    // lineHeight: "1.75rem",
-    // padding: "0.875rem",
-  };
+
   return (
     <>
       <div className="max-w-[484px] mx-auto  px-4">
@@ -57,7 +48,7 @@ const BirthDate = ({ onContinueClick, onBackClick }) => {
         </p>
       </div>
 
-      <div className="bg-bg3 py-10 px-4 py-8 pt-3">
+      <div className="bg-bg3  px-4 py-8 pt-3">
         <div className="max-w-[484px] mx-auto px-4">
           <Image
             className="max-w-[66px] ml-auto mb-1"
@@ -69,10 +60,10 @@ const BirthDate = ({ onContinueClick, onBackClick }) => {
               <Day />
             </div>
             <div className="">
-            <Month />
+              <Month />
             </div>
             <div className="">
-            <Year />
+              <Year />
             </div>
           </div>
         </div>

@@ -1,16 +1,9 @@
-// Join.js
-
 import React, { useEffect } from 'react';
 import Tabs from './tabs';
 import ButtonNextStep from "@/common/buttonNextStep";
-import {  ChevronLeftIcon } from "@heroicons/react/24/solid";
+import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 
-interface JoinProps {
-  onContinueClick: () => void;
-  onBackClick: () => void;
-}
-
-const Join: React.FC<JoinProps> = ({ onContinueClick, onBackClick }) => {
+const Join = ({ onContinueClick, onBackClick }) => {
   const scrollToTop = () => {
     // Smooth scroll to the top with a slight delay
     setTimeout(() => {

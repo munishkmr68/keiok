@@ -11,7 +11,8 @@ const Step6 = () => {
       <div className="max-w-[484px] mx-auto px-4 py-12 pb-[30px]">
         <h3 className="font-bold">Forgot Email / Password</h3>
         <p className="text-t4 mb-0 text-base ">
-          Provide this information to help find your account (all fields are required)
+          Provide this information to help find your account (all fields are
+          required)
         </p>
       </div>
       <div className="bg-bg3 py-8 pt-3 sm:px-4">
@@ -25,13 +26,13 @@ const Step6 = () => {
             <Inputbox
               name="firstname"
               id="firstname"
-              autoComplete="firstname"
+              autocomplete="firstname"
               placeholder="First Name on Account"
             />
             <Inputbox
               name="lastname"
               id="lastname"
-              autoComplete="lastname"
+              autocomplete="lastname"
               placeholder="Last Name on Account"
             />
           </div>

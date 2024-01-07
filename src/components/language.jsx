@@ -27,7 +27,7 @@ export default function Language() {
     <>
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative flex items-center">
-          {/* Display the language flag */}
+       
           <Listbox.Button className="relative w-full cursor-default border-y text-base border-[#D8D8D8] py-6 font-normal outline-none">
             <span className="block truncate">{selected.name}</span>
             <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
@@ -88,9 +88,17 @@ export default function Language() {
         Industry-standard encryption to protect the confidentiality of your
         personal information.
       </div>
-      <div className="flex items-center gap-[33px] border-y py-6 mt-6 border-gray justify-center">
-        <Image className="max-h-[60px] w-auto" src={NortonLogo} alt="logo" />
-        <Image className="max-h-[60px] w-auto" src={BbbLogo} alt="logo" />
+      <div className="flex items-center gap-4 sm:gap-[33px] border-y py-6 mt-6 border-gray justify-center">
+        <Image
+          className="max-h-[60px] sm:w-auto object-contain w-full"
+          src={NortonLogo}
+          alt="logo"
+        />
+        <Image
+          className="max-h-[60px] sm:w-auto object-contain w-full"
+          src={BbbLogo}
+          alt="logo"
+        />
       </div>
     </>
   );

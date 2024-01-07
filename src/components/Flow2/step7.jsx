@@ -22,13 +22,13 @@ const Step7 = () => {
             <Inputbox
               name="email"
               id="email"
-              autoComplete="email"
+              autocomplete="email"
               placeholder="Email"
             />
             <Inputbox
               name="password"
               id="password"
-              autoComplete="password"
+              autocomplete="password"
               placeholder="Password"
             />
           </div>

@@ -11,6 +11,7 @@ import YourTotal from "@/components/yourtotal";
 import Arrow from "../../assets/images/icons/check-circle-white.svg";
 import Footer from "@/common/Footer";
 import ButtonNextStep from "@/common/buttonNextStep";
+import ActivateAccountLaterModal from "./ActivateAccountLaterModal";
 import Lock from "../../assets/images/icons/lock-white.svg";
 
 const Step9 = ({ onContinueClick }) => {
@@ -179,7 +180,7 @@ const Step9 = ({ onContinueClick }) => {
           amt=""
           label="Activate MY Account"
         />
-        <button className="primary-button-outlined mt-2">Activate Later</button>
+        <ActivateAccountLaterModal />
       </div>
     </>
   );

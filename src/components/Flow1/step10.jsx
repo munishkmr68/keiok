@@ -8,6 +8,7 @@ import NortonLogo from "../../assets/images/norton-logo.png";
 import Footer from "@/common/Footer";
 import ButtonNextStep from "@/common/buttonNextStep";
 import Lock from "../../assets/images/icons/lock-white.svg";
+import CreatePasswordActivateLaterModal from "./CreatePasswordActivateLaterModal";
 
 const Step10 = ({ onContinueClick }) => {
   const handleButtonClick = () => {
@@ -45,25 +46,43 @@ const Step10 = ({ onContinueClick }) => {
                 className="max-h-[54px] pt-7 disabled:!border-inputcolor disabled:placeholder:text-inputcolor disabled:text-inputcolor peer"
                 id="email"
                 disabled={true}
-                autoComplete="email"
+                autocomplete="email"
                 placeholder="jaywade12@gmail.com"
               />
               <label className="font-bold absolute top-[2px] left-3.5 peer-disabled:text-inputcolor">
                 Email
               </label>
             </div>
-            <Inputbox
-              name="password"
-              id="password"
-              autoComplete="password"
-              placeholder="Password (6-60 characters)"
-            />
-            <Inputbox
-              name="password"
-              id="password"
-              autoComplete="password"
-              placeholder="Re-enter password"
-            />
+
+
+            <div className="relative">
+                <Inputbox
+                  name="password"
+                  id="password"
+                  type="password"
+                  placeholder=""
+                  className="floating-input peer"
+                />
+                <label htmlFor="password" className="floating-label">
+                Password (6-60 characters)
+                </label>
+              </div>
+
+            <div className="relative">
+                <Inputbox
+                  name="password"
+                  id="reenterpassword"
+                  type="password"
+                  placeholder=""
+                  className="floating-input peer"
+                />
+                <label htmlFor="reenterpassword" className="floating-label">
+                Re-enter password
+                </label>
+              </div>
+
+     
+
           </div>
         </div>
       </div>
@@ -82,7 +101,7 @@ const Step10 = ({ onContinueClick }) => {
           amt=""
           label="Activate MY Account"
         />
-        <button className="primary-button-outlined mt-2">Activate Later</button>
+         <CreatePasswordActivateLaterModal />
       </div>
     </>
   );

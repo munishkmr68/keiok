@@ -26,6 +26,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.jsx",
     ".next/types/**/*.ts",
     "src/components/CreatNewLead",
     "src/app/layout.js",

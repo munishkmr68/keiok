@@ -1,21 +1,17 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import CheckmarkIcon from "../../assets/images/icons/checkmark.svg";
 import Close from "../../assets/images/icons/close-circle.svg";
 
 const checkicon = {
   width: "24px",
   height: "24px",
 };
-const addressbtn = {
-  color: "#1990C6",
-};
 
 const listingspan = {
   width: "calc(100% - 34px)",
 };
 
-const Popup = () => {
+const ConfirmModal = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -34,11 +30,11 @@ const Popup = () => {
           onClick={openModal}
           className="rounded-full border border-t2 text-t2 hover:bg-t2 hover:text-white transition ease-in-out  px-4 py-2 mx-auto"
         >
-          Confirm Address
+          Fun Fact
         </button>
       </div>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-20" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -62,7 +58,7 @@ const Popup = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="mx-4 sm:mx-0 w-full max-w-md transform mt-24 p-7 bg-white  text-left align-middle  transition-all rounded-md">
+                <Dialog.Panel className="mx-4 sm:mx-0 w-full max-w-[375px] transform mt-24 p-7 bg-white  text-left align-middle  transition-all rounded-md">
                   <div>
                     <Close
                       className="mb-1 ml-auto cursor-pointer"
@@ -109,13 +105,17 @@ const Popup = () => {
                     </div>
                   </div>
 
-                  <button className="primary-button mt-[30px]">
+                  <button
+                    className="primary-button"
+                    onClick={() => {
+                      setShowStep8(true); // Set showStep8 to true to display Step8
+                      closeModal(); // Close the modal
+                      onContinueClick(); // Optionally call onContinueClick if needed
+                    }}
+                  >
                     Use suggested address
                   </button>
-                  <button
-                    className="dark-button-outlined border-[#1990C6] mt-[10px]"
-                    style={addressbtn}
-                  >
+                  <button className="primary-button-outlined mt-[10px]">
                     Use address you entered
                   </button>
                 </Dialog.Panel>
@@ -127,4 +127,4 @@ const Popup = () => {
     </>
   );
 };
-export default Popup;
+export default ConfirmModal;

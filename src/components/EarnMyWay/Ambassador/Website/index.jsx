@@ -42,12 +42,12 @@ const Website = ({ onContinueClick, onBackClick }) => {
             <Inputbox
               name="websitename"
               id="websitename"
-              autoComplete="websitename"
+              autocomplete="websitename"
               placeholder="Your website name"
             />
           </div>
-          <div class="max-w-[484px] mx-auto">
-            <button class="dark-button mt-8">Check availability</button>
+          <div className="max-w-[484px] mx-auto">
+            <button className="dark-button mt-8">Check availability</button>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ const Step4 = () => {
             <Inputbox
               name="email"
               id="email"
-              autoComplete="email"
+              autocomplete="email"
               placeholder="Email"
             />
           </div>

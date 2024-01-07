@@ -12,6 +12,7 @@ import Footer from "@/common/Footer";
 import ButtonNextStep from "@/common/buttonNextStep";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 
+
 const Step4 = ({ onContinueClick, onBackClick }) => {
   const scrollToTop = () => {
     // Smooth scroll to the top with a slight delay

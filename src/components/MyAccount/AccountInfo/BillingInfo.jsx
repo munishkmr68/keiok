@@ -3,7 +3,6 @@ import { useState } from "react";
 import Language from "@/components/language";
 import ArrowRightIcon from "../../../assets/images/icons/arrow-right.svg";
 import Footer from "@/common/Footer";
-import { useRouter } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import PaymentInfo from "@/components/MyAccount/AccountInfo/PaymentInfo";
 
