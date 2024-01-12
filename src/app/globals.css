@@ -84,7 +84,14 @@
     @apply border border-input1 px-3.5 pt-5 pb-1 min-h-[54px] block w-full placeholder:text-input1 text-t2 sm:text-lg text-base rounded-[3px] focus-visible:outline-none focus-visible:border-blue;
   }
   .floating-label {
-    @apply absolute text-input1 peer-placeholder-shown:sm:text-lg text-base peer-placeholder-shown:font-normal font-medium peer-focus:!font-medium peer-focus:!text-base duration-300 transform -translate-y-[0.9rem] top-[0.9rem] z-10 origin-[0] start-3.5  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-[0.9rem] rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto;
+    @apply absolute text-input1 peer-placeholder-shown:sm:text-lg text-base peer-placeholder-shown:font-normal font-medium peer-focus:!font-medium peer-focus:!text-base duration-300 transform -translate-y-[0.9rem] top-[0.9rem] z-10 origin-[0] start-3.5  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-[0.9rem] rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto pointer-events-none;
+  }
+  .floating-listbox-label {
+    @apply absolute top-[0.9rem] transform -translate-y-[0] z-10 bg-white origin-[0] start-3.5 pointer-events-none duration-300 text-lg;
+  }
+  button[data-headlessui-state="open"] .floating-listbox-label,
+  .selected-option .floating-listbox-label {
+    @apply translate-y-[-0.9rem] text-base font-bold;
   }
 
   .input1.invalid {
@@ -104,6 +111,12 @@
   }
   .selectbox {
     @apply border border-input1 pl-3.5 pr-7 py-3 block w-full text-input1  sm:text-lg text-base rounded-[3px] bg-white bg-[] appearance-none;
+  }
+  .otp-input-container {
+    @apply flex gap-2 justify-center;
+  }
+  .otp-input {
+    @apply text-t2 sm:text-lg text-base border-2 border-transparent border-b-[#D9D9D9] min-w-[68px] h-[96px] focus-visible:border-blue focus-visible:rounded-[9px] focus-visible:outline-none appearance-none;
   }
 }
 
@@ -181,15 +194,13 @@
     @apply bg-blue;
   }
 
-.suggestion-item{
-  @apply font-bold text-t2 px-4 p-3.5 bg-white odd:bg-bg3 border border-transparent
+  .suggestion-item {
+    @apply font-bold text-t2 px-4 p-3.5 bg-white odd:bg-bg3 border border-transparent;
+  }
+  .suggestion-item--active {
+    @apply text-blue  bg-bg2 odd:bg-bg2 border border-blue;
+  }
+  .autocomplete-dropdown-container {
+    @apply border border-t-0 border-blue rounded-b-[3px] -mt-px;
+  }
 }
-.suggestion-item--active{
-  @apply text-blue  bg-bg2 odd:bg-bg2 border border-blue
-}
-.autocomplete-dropdown-container{
-  @apply border border-t-0 border-blue rounded-b-[3px] -mt-px
-}
-  
-}
-

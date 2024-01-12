@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/solid";
+import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 
 // Import flag icons or images for each language
 import EnglishFlag from "../assets/images/icons/country-flag.png";
@@ -31,7 +31,7 @@ export default function Language() {
               <Image src={selected.flag} alt="flag" className="w-5 h-5 mr-2" />
             </span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-              <ChevronUpDownIcon
+              <ChevronDownIcon
                 className="h-5 w-5 text-border-gray-400"
                 aria-hidden="true"
               />

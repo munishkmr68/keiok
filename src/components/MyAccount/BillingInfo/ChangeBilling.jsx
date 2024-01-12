@@ -4,20 +4,29 @@ import Language from "@/components/language";
 import Footer from "@/common/Footer";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import Day from "./Day";
-import OrderHistory from "@/components/MyAccount/AccountInfo/ChangeEmail";
+import BillingInfo from "@/components/MyAccount/BillingInfo/BillingInfo";
+import LetsConfirm from "./LetsConfirm";
 
 const ChangeBilling = () => {
-  const [showOrderHistory, setShowOrderHistory] = useState(false);
+  const [showBillingInfo, setShowBillingInfo] = useState(false);
+  const [showChangeBilling, setShowChangeBilling] = useState(true);
+  const [showLetsConfirm, setShowLetsConfirm] = useState(false);
+
+  const handleClick = () => {
+    setShowChangeBilling(false);
+    setShowBillingInfo(false);
+    setShowLetsConfirm(true);
+  };
 
   const handleBackClick = () => {
-    setShowOrderHistory(!showOrderHistory);
+    setShowChangeBilling(false);
+    setShowBillingInfo(true);
+    setShowLetsConfirm(false);
   };
 
   return (
     <>
-      {showOrderHistory ? (
-        <OrderHistory />
-      ) : (
+      {showChangeBilling && (
         <>
           <div className="max-w-[484px] mx-auto px-4 pt-12">
             <span
@@ -43,7 +52,9 @@ const ChangeBilling = () => {
               <span className="text-t4">every 3 months</span>
             </div>
 
-            <button className="primary-button mt-8">Review & Confirm</button>
+            <button className="primary-button mt-8" onClick={handleClick}>
+              Review & Confirm
+            </button>
             <button className="primary-button-outlined mt-2">Cancel</button>
           </div>
 
@@ -52,10 +63,11 @@ const ChangeBilling = () => {
               <Language />
             </div>
           </div>
-          {showOrderHistory && <OrderHistory />}
           <Footer />
         </>
       )}
+      {showBillingInfo && <BillingInfo />}
+      {showLetsConfirm && <LetsConfirm />}
     </>
   );
 };

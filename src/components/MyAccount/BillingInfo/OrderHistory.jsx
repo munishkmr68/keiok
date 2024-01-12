@@ -6,20 +6,53 @@ import Footer from "@/common/Footer";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import ChangeBilling from "@/components/MyAccount/AccountInfo/ChangeBilling";
+import BillingInfo from "@/components/MyAccount/BillingInfo/BillingInfo";
+import OrderDetails from "./OrderDetails";
+import ShippingDetails from "./ShippingDetails";
+import PaymentDetails from "./PaymentDetails";
 
 const OrderHistory = () => {
-  const [showChangeBilling, setShowChangeBilling] = useState(false);
+  const [showOrderHistory, setShowOrderHistory] = useState(true);
+  const [showBillingInfo, setShowBillingInfo] = useState(false);
+  const [showOrderDetails, setShowOrderDetails] = useState(false);
+  const [showShippingDetails, setShowShippingDetails] = useState(false);
+  const [showPaymentDetails, setShowPaymentDetails] = useState(false);
 
-  const handleButtonClick = () => {
-    setShowChangeBilling(!showChangeBilling);
+  const handleOrderDetailsClick = () => {
+    setShowOrderDetails(true);
+    setShowBillingInfo(false);
+    setShowOrderHistory(false);
+    setShowShippingDetails(false);
+    setShowPaymentDetails(false);
+  };
+
+  const handleShippingDetailsClick = () => {
+    setShowOrderDetails(false);
+    setShowBillingInfo(false);
+    setShowOrderHistory(false);
+    setShowShippingDetails(true);
+    setShowPaymentDetails(false);
+  };
+
+  const handlePaymentDetailsClick = () => {
+    setShowOrderDetails(false);
+    setShowBillingInfo(false);
+    setShowOrderHistory(false);
+    setShowShippingDetails(false);
+    setShowPaymentDetails(true);
+  };
+
+  const handleBackClick = () => {
+    setShowBillingInfo(true);
+    setShowOrderHistory(false);
+    setShowOrderDetails(false);
+    setShowShippingDetails(false);
+    setShowPaymentDetails(false);
   };
 
   return (
     <>
-      {showChangeBilling ? (
-        <ChangeBilling />
-      ) : (
+      {showOrderHistory && (
         <>
           <div className="max-w-[484px] mx-auto px-4 pt-12">
             <span
@@ -59,32 +92,31 @@ const OrderHistory = () => {
 
               <div className="divide-y divide-gray">
                 <div className="py-5 ">
-                  <Link
-                    href="#"
-                    onClick={handleButtonClick}
-                    className="sm:text-lg text-base flex items-center justify-between gap-2"
+                  <button
+                    onClick={handleOrderDetailsClick}
+                    className="sm:text-lg text-base flex items-center w-full justify-between gap-2 text-blue"
                   >
                     View order details
                     <ChevronRightIcon className="w-5 h-5" />
-                  </Link>
+                  </button>
                 </div>
                 <div className="py-5">
-                  <Link
-                    href="#"
-                    className=" sm:text-lg text-base flex items-center justify-between gap-2"
+                  <button
+                    onClick={handleShippingDetailsClick}
+                    className="sm:text-lg text-base flex items-center w-full justify-between gap-2 text-blue"
                   >
                     View shipping details
                     <ChevronRightIcon className="w-5 h-5" />
-                  </Link>
+                  </button>
                 </div>
                 <div className="py-5">
-                  <Link
-                    href="#"
-                    className=" sm:text-lg text-base flex items-center justify-between gap-2"
+                  <button
+                    onClick={handlePaymentDetailsClick}
+                    className="sm:text-lg text-base flex items-center w-full justify-between gap-2 text-blue"
                   >
                     View payment details
                     <ChevronRightIcon className="w-5 h-5" />
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -162,10 +194,14 @@ const OrderHistory = () => {
               <Language />
             </div>
           </div>
-          {showChangeBilling && <ChangeBilling />}
           <Footer />
         </>
       )}
+
+      {showBillingInfo && <BillingInfo />}
+      {showOrderDetails && <OrderDetails />}
+      {showShippingDetails && <ShippingDetails />}
+      {showPaymentDetails && <PaymentDetails />}
     </>
   );
 };

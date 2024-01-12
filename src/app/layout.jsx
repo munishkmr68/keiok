@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
 
       <Script
-        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places`}
+        src={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBvy4in2chFztIjmTz-92od4VTnRPYYdtI&libraries=places`}
         strategy="beforeInteractive"
       />
 

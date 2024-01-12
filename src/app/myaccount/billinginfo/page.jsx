@@ -1,11 +1,10 @@
-// EarnMyWay.js
+// AccountInfo.js
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import Account from "@/components/MyAccount/AccountInfo/Account";
-import BillingInfo from "@/components/MyAccount/AccountInfo/BillingInfo";
+import Account from "@/components/MyAccount/BillingInfo/Account";
 
-const EarnMyWay = () => {
+const BillingInfo = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter();
 
@@ -32,15 +31,9 @@ const EarnMyWay = () => {
       onContinueClick={handleButtonClick}
       onBackClick={handleBackClick}
     />,
-
-    <BillingInfo
-      key={6}
-      onContinueClick={handleButtonClick}
-      onBackClick={handleBackClick}
-    />,
   ];
 
   return <>{steps[currentStep]}</>;
 };
 
-export default EarnMyWay;
+export default BillingInfo;

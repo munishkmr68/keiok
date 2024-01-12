@@ -7,20 +7,20 @@ import ArrowRightIcon from "../../../assets/images/icons/arrow-right-customizabl
 import Amex from "../../../assets/images/icons/amex.svg";
 import PrdImg from "../../../assets/images/prd-img.png";
 import Footer from "@/common/Footer";
-import AccountInfo from "@/components/MyAccount/AccountInfo/AccountInfo";
+import BillingInfo from "@/components/MyAccount/BillingInfo/BillingInfo";
 
 const Account = () => {
-  const [showAccountInfo, setShowAccountInfo] = useState(false);
+  const [showBillingInfo, setShowBillingInfo] = useState(false);
 
   const handleButtonClick = () => {
-    // Toggle the value of showAccountInfo when the button is clicked
-    setShowAccountInfo(!showAccountInfo);
+    // Toggle the value of showBillingInfo when the button is clicked
+    setShowBillingInfo(!showBillingInfo);
   };
 
   return (
     <>
-      {showAccountInfo ? (
-        <AccountInfo />
+      {showBillingInfo ? (
+        <BillingInfo />
       ) : (
         <>
           <div className="max-w-[484px] mx-auto px-4">
@@ -60,10 +60,13 @@ const Account = () => {
                   </div>
                   <p> September 16, 2023</p>
                 </div>
-                <ArrowRightIcon className="text-t2  group-hover:text-blue" />
+             
               </div>
 
-              <div className="py-6 border-b border-gray flex items-center justify-between gap-2  group cursor-pointer">
+              <div
+                className="py-6 border-b border-gray flex items-center justify-between gap-2  group cursor-pointer"
+                onClick={handleButtonClick}
+              >
                 <div>
                   <div className="text-t2 mb-0.5 sm:text-lg text-base font-medium group-hover:text-blue transition ease-in-out">
                     Manage Billing Info
@@ -72,12 +75,10 @@ const Account = () => {
                     Payment Info, Order History, Delivery & Billing
                   </p>
                 </div>
+                <ArrowRightIcon  className="text-t2  group-hover:text-blue" />
               </div>
 
-              <div
-                className="py-6 border-b border-gray flex items-center justify-between gap-2 cursor-pointer group"
-                onClick={handleButtonClick}
-              >
+              <div className="py-6 border-b border-gray flex items-center justify-between gap-2 cursor-pointer group">
                 <div>
                   <div className="text-t2 mb-0.5 font-medium group-hover:text-blue transition ease-in-out">
                     Manage Account Info
@@ -86,14 +87,14 @@ const Account = () => {
                     Payment Info, Order History, Delivery & Billing
                   </p>
                 </div>
-                <ArrowRightIcon className="text-t2  group-hover:text-blue" />
+                <ArrowRightIcon  className="text-t2  group-hover:text-blue" />
               </div>
             </div>
             <button className="primary-button mt-[30px]">
               Cancel MY Subscription
             </button>
           </div>
-          {showAccountInfo && <AccountInfo />}
+          {showBillingInfo && <BillingInfo />}
           <div className="max-w-[484px] mx-auto px-4 py-8">
             <div className="mt-16">
               <Language />
